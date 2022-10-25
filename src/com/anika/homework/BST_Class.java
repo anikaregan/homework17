@@ -43,7 +43,6 @@ class BST_Class {
     private void deleteNode(Node toDelete, Node parent) {
         if (toDelete.left == null || toDelete.right == null) {
             // Cases 1 and 2
-            Node toDeleteChild;
 
             if (toDelete.left != null)
                 toDeleteChild = toDelete.left;
