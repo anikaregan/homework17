@@ -35,16 +35,15 @@ class BST_Class {
         if (current == null) // no such key
             return null;
         else {
-            Node removedData = current;
             deleteNode(current, parent);
-            return removedData;
+            return current;
         }
     }
 
     private void deleteNode(Node toDelete, Node parent) {
         if (toDelete.left == null || toDelete.right == null) {
             // Cases 1 and 2
-            Node toDeleteChild = null;
+            Node toDeleteChild;
 
             if (toDelete.left != null)
                 toDeleteChild = toDelete.left;
